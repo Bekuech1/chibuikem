@@ -19,13 +19,13 @@ const Experience: React.FC = () => {
           </p>
         </div>
         <div className="grid gap-6 w-full">
-          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-right">
             Frontend Developer at Meetro
           </p>
-          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-right">
             Frontend Developer at Rivala
           </p>
-          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-right">
             Freelance
           </p>
         </div>

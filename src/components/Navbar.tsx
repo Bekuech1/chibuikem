@@ -2,7 +2,7 @@
 
 import React, { PropsWithChildren, useState } from "react";
 import Link from "next/link";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion, AnimatePresence, Variants } from "framer-motion";
 
 type NavbarProps = PropsWithChildren<{
   showButton?: boolean;
@@ -16,7 +16,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   };
 
   // Animation variants
-  const navbarVariants = {
+  const navbarVariants: Variants = {
     hidden: { y: -100, opacity: 0 },
     visible: { 
       y: 0, 
@@ -28,7 +28,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     }
   };
 
-  const dropdownVariants = {
+  const dropdownVariants: Variants = {
     hidden: {
       scale: 0,
       opacity: 0,
@@ -49,7 +49,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     }
   };
 
-  const menuItemVariants = {
+  const menuItemVariants: Variants = {
     hidden: { x: -20, opacity: 0 },
     visible: (i: number) => ({
       x: 0,
@@ -62,7 +62,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     })
   };
 
-  const buttonVariants = {
+  const buttonVariants: Variants = {
     hover: { 
       scale: 1.05,
       transition: { duration: 0.2 }
@@ -73,7 +73,7 @@ const Navbar: React.FC<NavbarProps> = () => {
     }
   };
 
-  const linkVariants = {
+  const linkVariants: Variants = {
     hover: {
       scale: 1.05,
       transition: { duration: 0.2 }
