@@ -9,7 +9,7 @@ const Footer: React.FC = () => {
         <h4 className="berlin-sans md:text-[64px] text-[40px] font-normal leading-none text-white uppercase">
           say hello
         </h4>
-        <p className="geist md:text-[24px] text-[20px] font-normal leading-none text-white fix p-4">
+        <p className="geist md:text-[24px] text-[20px] font-normal leading-none text-white">
           <span>~ </span>chibuikemigboanugo.1@gmail.com
         </p>
       </div>
