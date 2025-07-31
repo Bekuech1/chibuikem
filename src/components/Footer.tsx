@@ -4,7 +4,7 @@ import React from "react";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="w-full h-fit flex flex-col px-6 py-5 justify-center items-center gap-[56px] bg-[#3F1BCF]">
+    <footer className="w-full h-fit flex flex-col px-6 py-5 justify-center items-center gap-[56px] bg-[#3F1BCF]" id="contact">
       <div className="w-full h-fit grid text-left gap-1">
         <h4 className="berlin-sans md:text-[64px] text-[40px] font-normal leading-none text-white uppercase">
           say hello

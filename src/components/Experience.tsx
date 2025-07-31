@@ -8,24 +8,24 @@ const Experience: React.FC = () => {
       </h1>
       <div className="flex w-full justify-between items-center md:gap-20 gap-6">
         <div className="grid gap-6 w-full">
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-[#B2B2B2] w-fit">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-[#B2B2B2] w-fit">
             March, 2025 - Present
           </p>
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-[#B2B2B2] w-fit">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-[#B2B2B2] w-fit">
             August, 2024 - June, 2025
           </p>
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-[#B2B2B2] w-fit">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-[#B2B2B2] w-fit">
             December, 2023 - Present
           </p>
         </div>
         <div className="grid gap-6 w-full">
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
             Frontend Developer at Meetro
           </p>
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
             Frontend Developer at Rivala
           </p>
-          <p className="geist font-normal sm:text-[16px] text-base leading-[100%] text-white w-fit text-left">
+          <p className="geist font-normal sm:text-[16px] text-[12px] leading-[100%] text-white w-fit text-left">
             Freelance
           </p>
         </div>

@@ -20,6 +20,18 @@ const Works = () => {
       year: "2025",
     },
     {
+      name: "Chibuikem I.",
+      techStacks: [
+        { name: "Next" },
+        { name: "Tailwind" },
+        { name: "Framer Motion" },
+      ],
+      liveLink: "https://blog-platform.com",
+      githubLink: "https://github.com/your-username/blog-platform",
+      previewImage: "/bekuechi.png",
+      year: "2025",
+    },
+    {
       name: "Groovz",
       techStacks: [
         { name: "React" },
@@ -32,18 +44,6 @@ const Works = () => {
         "https://github.com/Victorthedev/Music-For-You-Frontend-Spotify",
       previewImage: "/groovz.png",
       year: "2024",
-    },
-    {
-      name: "Chibuikem I.",
-      techStacks: [
-        { name: "Next" },
-        { name: "Tailwind" },
-        { name: "Framer Motion" },
-      ],
-      liveLink: "https://blog-platform.com",
-      githubLink: "https://github.com/your-username/blog-platform",
-      previewImage: "/bekuechi.png",
-      year: "2025",
     },
     {
       name: "Bandage",
@@ -77,7 +77,7 @@ const Works = () => {
   ];
 
   return (
-    <div className="w-full gap-5 grid" id="works">
+    <div className="w-full gap-5 grid" id="projects">
       <h2 className="berlin-sans uppercase font-bold md:text-[40px] text-[20px] leading-[100%]">
         Featured Projects
       </h2>

@@ -2,41 +2,42 @@ import React, { useRef, useState, useCallback, RefObject } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
+// === Interface for card props ===
 interface CardProps {
   containerRef: RefObject<HTMLDivElement | null>;
   src: string;
   top: string;
-  left: string;
+  left?: string;
+  right?: string;
   className?: string;
   alt?: string;
 }
 
-// Custom hook for z-index management
+// === Custom hook for managing z-index on drag ===
 const useZIndexManager = () => {
   const [zIndex, setZIndex] = useState(0);
-  
+
   const bringToFront = useCallback(() => {
     const els = document.querySelectorAll(".drag-elements");
     let maxZIndex = -Infinity;
-    
+
     els.forEach((el) => {
-      const z = parseInt(
-        window.getComputedStyle(el).getPropertyValue("z-index")
-      );
+      const z = parseInt(window.getComputedStyle(el).getPropertyValue("z-index"));
       if (!isNaN(z) && z > maxZIndex) {
         maxZIndex = z;
       }
     });
-    
+
     setZIndex(maxZIndex + 1);
   }, []);
-  
+
   return { zIndex, bringToFront };
 };
 
+// === Main About section ===
 const About: React.FC = () => {
   return (
-    <section className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center">
+    <section className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center" id="about">
       <h2 className="berlin-sans relative md:text-[36px] text-[24px] font-normal text-white leading-[100%] uppercase w-full">
         Beyond the screen
       </h2>
@@ -55,6 +56,7 @@ const About: React.FC = () => {
   );
 };
 
+// === Cards container ===
 const Cards: React.FC = () => {
   const containerRef = useRef<HTMLDivElement>(null);
 
@@ -73,7 +75,7 @@ const Cards: React.FC = () => {
         src="/beko2.jpg"
         alt="Second draggable card"
         top="2%"
-        left="71%"
+        right="3%"
         className="lg:w-[279px] lg:h-[368px] sm:w-[209px] sm:h-[288px] size-[174px]"
       />
       <Card
@@ -81,7 +83,7 @@ const Cards: React.FC = () => {
         src="/beko3.jpg"
         alt="Third draggable card"
         top="63%"
-        left="71%"
+        right="3%"
         className="lg:w-[293px] lg:h-[386px] sm:w-[203px] sm:h-[266px] w-[184px] h-[219px]"
       />
       <Card
@@ -96,11 +98,13 @@ const Cards: React.FC = () => {
   );
 };
 
+// === Single card component ===
 const Card: React.FC<CardProps> = ({
   containerRef,
   src,
   top,
   left,
+  right,
   className,
   alt = "Draggable card",
 }) => {
@@ -111,7 +115,8 @@ const Card: React.FC<CardProps> = ({
       onMouseDown={bringToFront}
       style={{
         top,
-        left,
+        ...(left ? { left } : {}),
+        ...(right ? { right } : {}),
         zIndex,
       }}
       className={twMerge(
@@ -130,8 +135,6 @@ const Card: React.FC<CardProps> = ({
         stiffness: 300,
         damping: 20,
       }}
-      // Uncomment below and remove dragElastic to remove movement after release
-      // dragMomentum={false}
     />
   );
 };
