@@ -2,7 +2,7 @@ import React from "react";
 
 const Hero = () => {
   return (
-    <section className="w-full lg:flex grid lg:gap-[30%] gap-8 items-center mt-2 lg:py-14 py-8">
+    <section className="w-full lg:flex grid lg:gap-[30%] gap-8 items-center lg:py-14 mt-15">
       <div className="">
         <h1 className="berlin-sans uppercase font-bold md:text-[60px] text-[36px] leading-[80%]">
           frontend

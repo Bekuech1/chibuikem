@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <>
       <motion.nav 
-        className="w-full flex justify-between items-center h-fit top-0 right-0 fixed md:px-20 px-6 py-4 md:py-1 bg-[#040404] z-50"
+        className="w-full flex justify-between items-center h-fit top-0 right-0 fixed md:px-20 px-6 py-4 md:py-2 bg-[#040404] z-50"
         variants={navbarVariants}
         initial="hidden"
         animate="visible"
