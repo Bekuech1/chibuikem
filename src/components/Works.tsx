@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import { motion } from "framer-motion";
 
 const Works = () => {
   const selectedWorks = [
@@ -96,10 +97,11 @@ const Works = () => {
               </h6>
               <div className="flex flex-wrap md:gap-4 gap-1 mt-2">
                 {work.techStacks.map((tech, techIndex) => (
-                  <div key={techIndex} className="size-fit rounded-full border-[2px] md:py-[6px] md:px-3 p-2 border-[#403D49]">
-                    <p
-                      className="geist font-normal text-[14px] leading-[100%] text-white"
-                    >
+                  <div
+                    key={techIndex}
+                    className="size-fit rounded-full border-[2px] md:py-[6px] md:px-3 p-2 border-[#403D49]"
+                  >
+                    <p className="geist font-normal text-[14px] leading-[100%] text-white">
                       {tech.name}
                     </p>
                   </div>
@@ -112,31 +114,35 @@ const Works = () => {
               className="md:h-[312px] md:w-[587px] h-[150px] w-[260px] rounded-xl"
             />
             <div className="flex gap-4 mt-2">
-                <a href={work.githubLink}>
-                  <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full">
-                    <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
-                      Github
-                    </p>
-                    <img
-                      src="/links.svg"
-                      alt=""
-                      className="size-[10px]"
-                    />
-                  </div>
-                </a>
-                <a href={work.liveLink}>
-                  <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full">
-                    <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
-                      Link
-                    </p>
-                    <img
-                      src="/links.svg"
-                      alt=""
-                      className="size-[10px]"
-                    />
-                  </div>
-                </a>
-              </div>
+              <motion.a
+                href={work.githubLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full">
+                  <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
+                    Github
+                  </p>
+                  <img src="/links.svg" alt="" className="size-[10px]" />
+                </div>
+              </motion.a>
+              <motion.a
+                href={work.liveLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.8 }}
+              >
+                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full cursor-pointer">
+                  <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
+                    Link
+                  </p>
+                  <img src="/links.svg" alt="" className="size-[10px]" />
+                </div>
+              </motion.a>
+            </div>
           </div>
         </div>
       ))}

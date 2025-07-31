@@ -122,7 +122,7 @@ const Navbar: React.FC<NavbarProps> = () => {
         
         <div className="w-full flex justify-end">
           <motion.button 
-            className="geist bg-white hover:bg-white/50 py-3 px-6 rounded-full text-[16px] font-bold leading-[100%] text-[#050505] md:block hidden transition-colors"
+            className="geist bg-white hover:bg-white/50 py-3 px-6 rounded-full text-[16px] font-bold leading-[100%] text-[#050505] md:block hidden transition-colors cursor-pointer"
             variants={buttonVariants}
             whileHover="hover"
             whileTap="tap"
@@ -155,7 +155,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       <AnimatePresence>
         {dropDownOpen && (
           <motion.div
-            className="fixed right-6 top-[70px] w-full max-w-[calc(100%-48px)] mx-auto bg-[#000000]/85 border border-[#373737] backdrop-blur-[16px] h-[500px] rounded-2xl shadow-lg z-40"
+            className="fixed md:hidden block right-6 top-[70px] w-full max-w-[calc(100%-48px)] mx-auto bg-[#000000]/85 border border-[#373737] backdrop-blur-[16px] h-[500px] rounded-2xl shadow-lg z-40 "
             variants={dropdownVariants}
             initial="hidden"
             animate="visible"
