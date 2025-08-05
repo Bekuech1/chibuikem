@@ -3,7 +3,7 @@ import React from "react";
 const Experience: React.FC = () => {
   return (
     <div className="grid md:gap-10 gap-6 mx-auto w-full max-w-[600px] px-6" id="experience">
-      <h1 className="berlin-sans uppercase font-bold md:text-[40px] text-[20px] leading-[100%] text-center">
+      <h1 className="berlin-sans uppercase font-bold md:text-[36px] text-[20px] leading-[100%] text-center">
         Experience
       </h1>
       <div className="flex w-full justify-between items-center md:gap-20 gap-6">

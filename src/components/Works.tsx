@@ -14,9 +14,9 @@ const Works = () => {
         { name: "Zustand" },
         { name: "Framer Motion" },
       ],
-      liveLink: "https://Meetro.vercel.app",
+      liveLink: "https://Meetro.live",
       githubLink:
-        "https://github.com/Victorthedev/Music-For-You-Frontend-Spotify",
+        "https://github.com/Bekuech1/Meetro",
       previewImage: "/meetro.png",
       year: "2025",
     },
@@ -27,8 +27,8 @@ const Works = () => {
         { name: "Tailwind" },
         { name: "Framer Motion" },
       ],
-      liveLink: "https://blog-platform.com",
-      githubLink: "https://github.com/your-username/blog-platform",
+      liveLink: "https://chibuikemigboanugo.vercel.app",
+      githubLink: "https://github.com/Bekuech1/chibuikem",
       previewImage: "/bekuechi.png",
       year: "2025",
     },
@@ -40,7 +40,7 @@ const Works = () => {
         { name: "Axios" },
         { name: "Zustand" },
       ],
-      liveLink: "https://Groovz.app.vercel",
+      liveLink: "https://main.d1n7z7zw3v28b1.amplifyapp.com/",
       githubLink:
         "https://github.com/Victorthedev/Music-For-You-Frontend-Spotify",
       previewImage: "/groovz.png",
@@ -79,7 +79,7 @@ const Works = () => {
 
   return (
     <div className="w-full gap-5 grid" id="projects">
-      <h2 className="berlin-sans uppercase font-bold md:text-[40px] text-[20px] leading-[100%]">
+      <h2 className="berlin-sans uppercase font-bold md:text-[36px] text-[20px] leading-[100%]">
         Featured Projects
       </h2>
       {selectedWorks.map((work, index) => (
@@ -95,11 +95,11 @@ const Works = () => {
               <h6 className="geist font-bold md:text-[20px] text-[18px] leading-[100%]">
                 {work.name}
               </h6>
-              <div className="flex flex-wrap md:gap-4 gap-1 mt-2">
+              <div className="flex flex-wrap md:gap-2 gap-1 mt-2">
                 {work.techStacks.map((tech, techIndex) => (
                   <div
                     key={techIndex}
-                    className="size-fit rounded-full border-[2px] md:py-[6px] md:px-3 p-2 border-[#403D49]"
+                    className="size-fit rounded-full border-[2px] md:py-[4px] md:px-3 p-2 border-[#403D49]"
                   >
                     <p className="geist font-normal text-[14px] leading-[100%] text-white">
                       {tech.name}
@@ -118,10 +118,10 @@ const Works = () => {
                 href={work.githubLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.8 }}
+                whileHover={{ scale: 1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full">
+                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full transition-colors origin-left duration-300">
                   <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
                     Github
                   </p>
@@ -132,10 +132,10 @@ const Works = () => {
                 href={work.liveLink}
                 target="_blank"
                 rel="noopener noreferrer"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.8 }}
+                whileHover={{ scale: 1 }}
+                whileTap={{ scale: 0.9 }}
               >
-                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full cursor-pointer">
+                <div className="flex size-fit items-center gap-2 bg-white hover:bg-white/50 py-[6px] px-3 rounded-full cursor-pointer transition-colors origin-left duration-300">
                   <p className="geist md:text-[16px] text-sm font-semibold leading-tight text-black">
                     Link
                   </p>

@@ -2,12 +2,20 @@
 @import url('https://fonts.cdnfonts.com/css/berlin-sans-fb');
 @import "tailwindcss";
 
+@font-face {
+  font-family: 'Berlin Sans';
+  src: url('/fonts/berlinsans.otf') format('opentype');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+
 .geist {
   font-family: "Geist", sans-serif;
 }
 
 .berlin-sans {
-  font-family: "Berlin Sans FB", sans-serif;
+  font-family: 'Berlin Sans', sans-serif;
 }
 
 .scrollbar-hide {
@@ -35,44 +43,6 @@
 body {
   color: var(--foreground);
   background: var(--background);
-}
-
-.gradient-background {
-  background: linear-gradient(
-    88.35deg,
-    #989898 12.54%,
-    #fefefe 50.14%,
-    #989898 89.63%
-  );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.typing-animation {
-  overflow: hidden; /* Prevents text overflow */
-  white-space: nowrap; /* Prevents text wrapping */
-  display: inline-block;
-  border-right: 3px solid #ffffff; /* Cursor effect */
-  animation: typing 2s steps(30, end), blink 0.5s step-end 2s; /* Sync animations */
-  animation-fill-mode: forwards; /* Ensures the animation end state is retained */
-}
-
-@keyframes typing {
-  from {
-    width: 0;
-  }
-  to {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  50% {
-    border-color: transparent;
-  }
-  100% {
-    border-color: transparent; /* Removes the border at the end of the animation */
-  }
 }
 
 .fix {

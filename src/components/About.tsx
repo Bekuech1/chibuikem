@@ -22,7 +22,9 @@ const useZIndexManager = () => {
     let maxZIndex = -Infinity;
 
     els.forEach((el) => {
-      const z = parseInt(window.getComputedStyle(el).getPropertyValue("z-index"));
+      const z = parseInt(
+        window.getComputedStyle(el).getPropertyValue("z-index")
+      );
       if (!isNaN(z) && z > maxZIndex) {
         maxZIndex = z;
       }
@@ -37,19 +39,26 @@ const useZIndexManager = () => {
 // === Main About section ===
 const About: React.FC = () => {
   return (
-    <section className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center" id="about">
+    <section
+      className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center"
+      id="about"
+    >
       <h2 className="berlin-sans relative md:text-[36px] text-[24px] font-normal text-white leading-[100%] uppercase w-full">
         Beyond the screen
       </h2>
-      <p className="geist relative md:text-[16px] text-[12px] font-normal text-white leading-[120%] max-w-xl mt-4 -z-10 px-8">
-        Lies a world of endless possibilities, where imagination meets reality.
-        It&apos;s a realm filled with vibrant colors, captivating stories, and
-        experiences waiting to unfold. Dive in and explore the adventures that
-        await! Each corner reveals new wonders, from enchanted forests to
-        bustling cities. Meet characters that inspire and challenge you, each
-        with their own tales to tell. Feel the thrill of discovery as you
-        navigate through uncharted territories. With every click, a new chapter
-        begins, inviting you to shape your own destiny.
+      <p className="geist relative md:text-[16px] text-[14px] font-normal text-white leading-[130%] max-w-xl mt-4 -z-10 px-8">
+        I'm more than just a developer — I'm a creator shaped by rhythm,
+        movement, and emotion. When I’m not immersed in lines of code, you’ll
+        find me on the basketball court where precision, pace, and flow drive
+        every move. That same instinct for motion translates into the animations
+        and interactions I build on the web. I’m a lover of art — drawn to
+        color, form, and visual storytelling. It fuels my eye for design,
+        helping me craft interfaces that don’t just function, but feel right.
+        And music? It’s my constant. Whether it's soul, hip-hop, or ambient
+        beats, music helps me find the rhythm in my workflow and the harmony in
+        my designs. All these pieces come together in how I build. I don't just
+        develop websites, I create digital spaces that feel alive,
+        thoughtful and real.
       </p>
       <Cards />
     </section>

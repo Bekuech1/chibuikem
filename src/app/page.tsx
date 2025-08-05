@@ -1,7 +1,5 @@
 "use client";
-
 import React from "react";
-
 import About from "../components/About";
 import Experience from "../components/Experience";
 import Hero from "../components/Hero";
@@ -10,7 +8,6 @@ import Works from "../components/Works";
 import Footer from "../components/Footer";
 
 export default function Home() {
-
   return (
     <div className="flex flex-col">
       <main className="h-screen bg-[#040404] flex justify-center relative">
