@@ -1,18 +1,18 @@
 "use client";
 
-import React, { PropsWithChildren, useState } from "react";
+import React, { PropsWithChildren } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence, Variants } from "framer-motion";
 
 type NavbarProps = PropsWithChildren<{
   showButton?: boolean;
+  isDropdownOpen: boolean;
+  setIsDropdownOpen: (open: boolean) => void;
 }>;
 
-const Navbar: React.FC<NavbarProps> = () => {
-  const [dropDownOpen, setDropdownOpen] = useState(false);
-
+const Navbar: React.FC<NavbarProps> = ({ isDropdownOpen, setIsDropdownOpen }) => {
   const toggleDropdown = () => {
-    setDropdownOpen(!dropDownOpen);
+    setIsDropdownOpen(!isDropdownOpen);
   };
 
   // Animation variants
@@ -83,7 +83,7 @@ const Navbar: React.FC<NavbarProps> = () => {
   return (
     <>
       <motion.nav
-        className="w-full flex justify-between items-center h-fit top-0 right-0 fixed md:px-20 px-6 py-4 md:py-2 bg-[#040404] z-50"
+        className="w-full flex justify-between items-center h-fit top-0 right-0 fixed md:px-20 px-6 py-4 md:py-2 bg-[#040404]/50 z-50"
         variants={navbarVariants}
         initial="hidden"
         animate="visible"
@@ -99,7 +99,7 @@ const Navbar: React.FC<NavbarProps> = () => {
 
         <div className="w-full md:flex hidden justify-center">
           <motion.div
-            className="border border-[#000000] py-3 px-6 rounded-full size-fit"
+            className="py-3 px-6 rounded-full size-fit"
             initial={{ y: -20, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.3 }}
@@ -157,9 +157,9 @@ const Navbar: React.FC<NavbarProps> = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
           >
             <motion.img
-              src={dropDownOpen ? "/close-nav.svg" : "/navbtn.svg"}
+              src={isDropdownOpen ? "/close-nav.svg" : "/navbtn.svg"}
               alt="Menu"
-              animate={{ rotate: dropDownOpen ? 180 : 0 }}
+              animate={{ rotate: isDropdownOpen ? 180 : 0 }}
               transition={{ duration: 0.4, ease: "easeInOut" }}
             />
           </motion.button>
@@ -167,7 +167,7 @@ const Navbar: React.FC<NavbarProps> = () => {
       </motion.nav>
 
       <AnimatePresence>
-        {dropDownOpen && (
+        {isDropdownOpen && (
           <motion.div
             className="fixed md:hidden block right-6 top-[70px] w-full max-w-[calc(100%-48px)] mx-auto bg-[#000000]/85 border border-[#373737] backdrop-blur-[16px] h-[500px] rounded-2xl shadow-lg z-40 "
             variants={dropdownVariants}
@@ -202,7 +202,7 @@ const Navbar: React.FC<NavbarProps> = () => {
                             : item.toLowerCase()
                         }`}
                         className="geist text-[16px] leading-[100%] text-white hover:text-white/50 transition-colors block font-normal w-fit"
-                        onClick={() => setDropdownOpen(false)}
+                        onClick={() => setIsDropdownOpen(false)}
                       >
                         {item}
                       </Link>

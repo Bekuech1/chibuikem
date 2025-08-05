@@ -47,16 +47,16 @@ const About: React.FC = () => {
         Beyond the screen
       </h2>
       <p className="geist relative md:text-[16px] text-[14px] font-normal text-white leading-[130%] max-w-xl mt-4 -z-10 px-8">
-        I'm more than just a developer — I'm a creator shaped by rhythm,
-        movement, and emotion. When I’m not immersed in lines of code, you’ll
+        I&apos;m more than just a developer — I&apos;m a creator shaped by rhythm,
+        movement, and emotion. When I&apos;m not immersed in lines of code, you&apos;ll
         find me on the basketball court where precision, pace, and flow drive
         every move. That same instinct for motion translates into the animations
-        and interactions I build on the web. I’m a lover of art — drawn to
+        and interactions I build on the web. I&apos;m a lover of art — drawn to
         color, form, and visual storytelling. It fuels my eye for design,
-        helping me craft interfaces that don’t just function, but feel right.
-        And music? It’s my constant. Whether it's soul, hip-hop, or ambient
+        helping me craft interfaces that don&apos;t just function, but feel right.
+        And music? It&apos;s my constant. Whether it&apos;s soul, hip-hop, or ambient
         beats, music helps me find the rhythm in my workflow and the harmony in
-        my designs. All these pieces come together in how I build. I don't just
+        my designs. All these pieces come together in how I build. I don&apos;t just
         develop websites, I create digital spaces that feel alive,
         thoughtful and real.
       </p>

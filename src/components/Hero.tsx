@@ -19,12 +19,12 @@ const Hero = () => {
       </div>
       <div className="max-w-[352px] h-fit grid gap-8">
         <p className="geist text-[14px] font-normal leading-tight text-white">
-          Hi, I'm Chibuikem Igboanugo — a dedicated frontend developer with 2
+          Hi, I&apos;m Chibuikem Igboanugo — a dedicated frontend developer with 2
           years of hands-on experience building responsive, user-centric web
-          applications. I’m passionate about crafting clean, efficient
-          interfaces that elevate the user experience. I'm always eager to
+          applications. I&apos;m passionate about crafting clean, efficient
+          interfaces that elevate the user experience. I&apos;m always eager to
           learn, explore emerging web technologies, and bring creative ideas to
-          life. Outside of work, you'll often find me diving into open-source
+          life. Outside of work, you&apos;ll often find me diving into open-source
           projects or experimenting with new tools to sharpen my skills.
         </p>
         <div className="flex gap-4 size-fit">
