@@ -102,7 +102,7 @@ const Cards: React.FC = () => {
         containerRef={containerRef}
         src="/beko4.jpg"
         alt="Fourth draggable card"
-        bottom="5%"
+        bottom="2%"
         left="3%"
         className="lg:w-[338px] lg:h-[328px] sm:w-[258px] sm:h-[238px] w-[145px] h-[159px]"
       />

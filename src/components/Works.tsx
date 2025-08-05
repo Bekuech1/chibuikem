@@ -29,7 +29,7 @@ const Works = () => {
       ],
       liveLink: "https://chibuikemigboanugo.vercel.app",
       githubLink: "https://github.com/Bekuech1/chibuikem",
-      previewImage: "/bekuechi.png",
+      previewImage: "/mine.png",
       year: "2025",
     },
     {
