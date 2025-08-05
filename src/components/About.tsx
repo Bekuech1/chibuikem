@@ -1,4 +1,6 @@
-import React, { useRef, useState, useCallback, RefObject } from "react";
+"use client";
+
+import React, { useRef, useState, useCallback, RefObject, useEffect } from "react";
 import { motion } from "framer-motion";
 import { twMerge } from "tailwind-merge";
 
@@ -6,7 +8,8 @@ import { twMerge } from "tailwind-merge";
 interface CardProps {
   containerRef: RefObject<HTMLDivElement | null>;
   src: string;
-  top: string;
+  top?: string;
+  bottom?: string;
   left?: string;
   right?: string;
   className?: string;
@@ -40,7 +43,7 @@ const useZIndexManager = () => {
 const About: React.FC = () => {
   return (
     <section
-      className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[1100px] min-h-[1000px] w-full justify-center items-center overflow-hidden text-center"
+      className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center"
       id="about"
     >
       <h2 className="berlin-sans relative md:text-[36px] text-[24px] font-normal text-white leading-[100%] uppercase w-full">
@@ -91,7 +94,7 @@ const Cards: React.FC = () => {
         containerRef={containerRef}
         src="/beko3.jpg"
         alt="Third draggable card"
-        top="63%"
+        bottom="3%"
         right="3%"
         className="lg:w-[293px] lg:h-[386px] sm:w-[203px] sm:h-[266px] w-[184px] h-[219px]"
       />
@@ -99,7 +102,7 @@ const Cards: React.FC = () => {
         containerRef={containerRef}
         src="/beko4.jpg"
         alt="Fourth draggable card"
-        top="65%"
+        bottom="5%"
         left="3%"
         className="lg:w-[338px] lg:h-[328px] sm:w-[258px] sm:h-[238px] w-[145px] h-[159px]"
       />
@@ -112,6 +115,7 @@ const Card: React.FC<CardProps> = ({
   containerRef,
   src,
   top,
+  bottom,
   left,
   right,
   className,
@@ -123,7 +127,8 @@ const Card: React.FC<CardProps> = ({
     <motion.img
       onMouseDown={bringToFront}
       style={{
-        top,
+        ...(top ? { top } : {}),
+        ...(bottom ? { bottom } : {}),
         ...(left ? { left } : {}),
         ...(right ? { right } : {}),
         zIndex,
