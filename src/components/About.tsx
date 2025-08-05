@@ -40,7 +40,7 @@ const useZIndexManager = () => {
 const About: React.FC = () => {
   return (
     <section
-      className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[900px] min-h-[800px] w-full justify-center items-center overflow-hidden text-center"
+      className="relative flex flex-col lg:min-h-[1100px] sm:min-h-[1100px] min-h-[1000px] w-full justify-center items-center overflow-hidden text-center"
       id="about"
     >
       <h2 className="berlin-sans relative md:text-[36px] text-[24px] font-normal text-white leading-[100%] uppercase w-full">
