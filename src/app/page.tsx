@@ -36,6 +36,7 @@ export default function Home() {
           muted
           loop
           playsInline
+          preload="auto"
         />
         {/* <div className="absolute md:top-[100px] top-[200px] sm:size-[600px] size-[360px] rounded-[50%] bg-[#3F1BCF52] blur-[80px]"></div>
         <div className="absolute md:top-[100px] top-[200px] sm:size-[600px] size-[360px] rounded-[50%] border border-[#3F1BCF52]"></div> */}
