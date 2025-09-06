@@ -1,6 +1,7 @@
 "use client";
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 
 const Footer: React.FC = () => {
   const [cursorPosition, setCursorPosition] = useState({ x: 0, y: 0 });
@@ -123,10 +124,12 @@ const Footer: React.FC = () => {
                 <p className="geist text-[16px] font-normal leading-tight text-white uppercase">
                   {item.label}
                 </p>
-                <img
+                <Image
                   src="/arrow-white.svg"
                   alt={`${item.label} arrow`}
                   className="size-[18px]"
+                  width={18}
+                  height={18}
                 />
               </div>
 

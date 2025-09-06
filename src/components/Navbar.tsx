@@ -107,7 +107,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDropdownOpen, setIsDropdownOpen }) =>
           >
             <ul className="flex gap-6 md:gap-3">
               {["Projects", "Experience", "About", "Contact"].map(
-                (item, index) => (
+                (item) => (
                   <motion.li
                     key={item}
                     variants={linkVariants}
