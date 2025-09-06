@@ -143,6 +143,7 @@ const Navbar: React.FC<NavbarProps> = ({ isDropdownOpen, setIsDropdownOpen }) =>
             initial={{ x: 50, opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
             transition={{ duration: 0.6, delay: 0.4 }}
+            onClick={() => window.open('/mycv.pdf', '_blank')}
           >
             Resume
           </motion.button>
@@ -219,6 +220,10 @@ const Navbar: React.FC<NavbarProps> = ({ isDropdownOpen, setIsDropdownOpen }) =>
                 initial={{ y: 20, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ delay: 0.35, duration: 0.4, ease: "easeOut" }}
+                onClick={() => {
+                  window.open('/mycv.pdf', '_blank');
+                  setIsDropdownOpen(false);
+                }}
               >
                 Resume
               </motion.button>
