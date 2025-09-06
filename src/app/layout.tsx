@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     siteName: "Chibuikem I.",
     images: [
       {
-        url: "/mine.png",
+        url: "https://chibuikemigboanugo.vercel.app/mine.png", // FULL URL
         width: 1200,
         height: 630,
         alt: "Chibuikem Igboanugo Portfolio",
@@ -29,8 +29,8 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Chibuikem I.",
     description: "Chibuikem Igboanugo - FrontEnd Developer",
-    images: ["/mine.png"],
-  },
+    images: ["https://chibuikemigboanugo.vercel.app/mine.png"], // FULL URL
+  },  
 };
 
 
@@ -41,6 +41,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <link rel="icon" href="/beko.svg" type="image/svg+xml" />
+      </head>
       <body
         className={`antialiased`}
       >
